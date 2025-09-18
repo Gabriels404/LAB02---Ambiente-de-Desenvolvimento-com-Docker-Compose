@@ -70,15 +70,15 @@ Uma estrutura de diretórios contendo todos os arquivos de configuração necess
 
 ### Critérios de Avaliação
 
-O ambiente completo deve ser iniciado com um único comando: docker-compose up --build.
+- O ambiente completo deve ser iniciado com um único comando: docker-compose up --build.
 
-As alterações de código nos diretórios locais do frontend e backend devem ser refletidas nos containers em execução sem a necessidade de um novo build.
+- As alterações de código nos diretórios locais do frontend e backend devem ser refletidas nos containers em execução sem a necessidade de um novo build.
 
-Todos os serviços devem estar acessíveis em suas respectivas portas mapeadas no host.
+- Todos os serviços devem estar acessíveis em suas respectivas portas mapeadas no host.
 
-As regras de roteamento do Nginx devem funcionar conforme especificado.
+- As regras de roteamento do Nginx devem funcionar conforme especificado.
 
-Os dados do PostgreSQL e do pgAdmin devem ser mantidos após a execução do comando docker-compose down e docker-compose up.
+- Os dados do PostgreSQL e do pgAdmin devem ser mantidos após a execução do comando docker-compose down e docker-compose up.
 
 
 
