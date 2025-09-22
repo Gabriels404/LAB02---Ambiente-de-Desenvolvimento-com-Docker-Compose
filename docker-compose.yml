@@ -1,0 +1,39 @@
+version: "3.9"
+
+networks:
+  minha_rede:
+    driver: bridge
+
+services:
+  postgres:
+    image: postgres:16
+    container_name: meu_postgres
+    restart: always
+    environment:
+      POSTGRES_USER: puc
+      POSTGRES_PASSWORD: "123456"
+      POSTGRES_DB: meu_banco
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    networks:
+      - minha_rede
+
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    container_name: meu_pgadmin
+    restart: always
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@puc.com
+      PGADMIN_DEFAULT_PASSWORD: senha123
+    ports:
+      - "5050:80"
+    volumes:
+      - pgadmindata:/var/lib/pgadmin
+    networks:
+      - minha_rede
+
+volumes:
+  pgdata:
+  pgadmindata:
