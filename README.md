@@ -87,3 +87,11 @@ REFERÊNCIA:
 YouTube:
 
 https://youtu.be/SZbo7VFjQWY
+
+O frontend abre normalmente em http://localhost:5173
+
+O nginx acessa o frontend via http://localhost:8080
+
+O pgAdmin acessível em http://localhost:5050
+
+O PostgreSQL ativo e persistente
